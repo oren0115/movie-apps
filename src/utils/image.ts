@@ -30,7 +30,7 @@ export function getImageConfig(): ImageConfig | null {
 export function buildImageUrl(
   path: string | null | undefined,
   size: string = "w500",
-  type: "poster" | "backdrop" | "logo" | "profile" | "still" = "poster"
+  _type: "poster" | "backdrop" | "logo" | "profile" | "still" = "poster"
 ): string {
   if (!path) {
     return "https://via.placeholder.com/500x750?text=No+Image"

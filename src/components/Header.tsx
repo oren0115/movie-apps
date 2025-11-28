@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { Search, Menu } from 'lucide-react'
+import { Search } from 'lucide-react'
 import { Input } from './ui/input'
 import { Button } from './ui/button'
 import { useWatchlist } from '../store/watchlist'

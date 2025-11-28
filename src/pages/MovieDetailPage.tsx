@@ -9,8 +9,8 @@ export function MovieDetailPage() {
   const movieId = id ? parseInt(id, 10) : 0
 
   const { data: movie, isLoading: movieLoading } = useMovie(movieId)
-  const { data: credits, isLoading: creditsLoading } = useMovieCredits(movieId)
-  const { data: videos, isLoading: videosLoading } = useMovieVideos(movieId)
+  const { data: credits } = useMovieCredits(movieId)
+  const { data: videos } = useMovieVideos(movieId)
   const { data: recommendations, isLoading: recommendationsLoading } = useMovieRecommendations(movieId)
 
   if (movieLoading) {

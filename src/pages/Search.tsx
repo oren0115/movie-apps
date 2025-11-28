@@ -4,7 +4,8 @@ import { MovieCard } from '../components/MovieCard'
 import { Skeleton } from '../components/ui/skeleton'
 import { Input } from '../components/ui/input'
 import { Search as SearchIcon } from 'lucide-react'
-import { useState, FormEvent } from 'react'
+import { useState } from 'react'
+import type { FormEvent } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 export function Search() {

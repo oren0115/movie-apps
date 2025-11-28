@@ -1,5 +1,4 @@
-import { useState } from 'react'
-import type { Genre } from '../api/tmdb'
+
 import { Button } from './ui/button'
 import { Badge } from './ui/badge'
 import { useGenres } from '../hooks/useGenres'
