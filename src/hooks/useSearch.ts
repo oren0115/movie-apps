@@ -1,0 +1,12 @@
+import { useQuery } from '@tanstack/react-query'
+import { searchMovies } from '../api/tmdb'
+
+export function useSearchMovies(query: string, enabled: boolean = true) {
+  return useQuery({
+    queryKey: ['search', 'movies', query],
+    queryFn: () => searchMovies(query),
+    enabled: enabled && query.length > 0,
+    staleTime: 1000 * 60 * 5, // 5 minutes
+  })
+}
+
