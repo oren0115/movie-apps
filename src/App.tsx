@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ErrorBoundary } from './components/ErrorBoundary'
 import { Header } from './components/Header'
+import { Footer } from './components/Footer'
 import { Home } from './pages/Home'
 import { Discover } from './pages/Discover'
 import { MovieDetailPage } from './pages/MovieDetailPage'
@@ -26,9 +27,9 @@ function AppContent() {
 
   return (
     <BrowserRouter>
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen bg-background flex flex-col">
         <Header />
-        <main>
+        <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/discover" element={<Discover />} />
@@ -37,6 +38,7 @@ function AppContent() {
             <Route path="/list" element={<List />} />
           </Routes>
         </main>
+        <Footer />
       </div>
     </BrowserRouter>
   )
